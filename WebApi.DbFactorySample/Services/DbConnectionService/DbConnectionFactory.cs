@@ -55,7 +55,7 @@ namespace WebApi.DbFactorySample.Services.DbConnectionService
         public DbConnection Get(HttpRequest httpRequest)
         {
             // get id from request.
-            var model = httpRequest.QueryString.Value.ToModelFromQueryString<HttpBaseQueryString>();
+            var model = httpRequest.QueryString.Value.ToModelFromQueryString<HttpTenantQueryString>();
             var connnecion = _connections.FirstOrDefault(c => c.Id == model.TenantId);
 
             return connnecion;
