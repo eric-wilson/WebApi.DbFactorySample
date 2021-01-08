@@ -10,7 +10,7 @@ This is often used in a multi-tenant environments where each tenant has a differ
 
 The `Startup.cs` registers the `DbConnectionServiceMiddleware` which wires up the `DbConnectionFactory` and the `AppDbContext`
 
-The `DbConnectionFactory` loads all available connections from the `appSettings.json` file. (You have move this environment variables or Secrets Managers, etc).
+The `DbConnectionFactory` loads all available connections from the `appSettings.json` file. *You can change this to environment variables or Secrets Managers, etc*.
 
 The `AppDbContext` attempts a connection on each request, which pulls the connection information from the `DbConnectionFactory`
 
